@@ -1,0 +1,5 @@
+[Directories]
+OutputDir=
+UnitOutputDir=
+SearchPath=C:\dev\lib\ACBr\Fontes\Terceiros\json4delphi\src;C:\dev\lib\ACBr\Fontes\ACBrComum;C:\dev\borion;C:\dev\borion\Plugins;C:\dev\borion\WebView2
+Conditionals=

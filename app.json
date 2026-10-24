@@ -1,0 +1,23 @@
+{
+  "productName": "Firebird Estatisticas",
+  "version": "0.1.0",
+  "identifier": "br.com.ellotecnologia.fbstats",
+  "build": {
+    "frontendDist": "web"
+  },
+  "app": {
+    "windows": [
+      {
+        "width": 1240,
+        "height": 800,
+        "minWidth": 1000,
+        "minHeight": 680,
+        "center": true,
+        "decorations": false
+      }
+    ]
+  },
+  "bundle": {
+      "icon": ["icon.ico"]
+  }
+}

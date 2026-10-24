@@ -1,0 +1,13 @@
+# gerados pelo build.bat / pela IDE
+*.exe
+*.dcu
+*.res
+*.~*
+*.dsk
+*.ddp
+WebView2Loader.dll
+# cópia do @borion/api (template vanilla)
+web/borion-api/
+# frontend (templates vite e react)
+node_modules/
+frontend/dist/

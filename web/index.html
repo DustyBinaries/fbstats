@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Firebird · Estatísticas de tamanho</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div id="win">
+  <div id="titlebar" data-borion-drag-region>
+    <div class="tb-left" data-borion-drag-region>
+      <div class="logo" data-borion-drag-region></div>
+      <span data-borion-drag-region>Firebird · Estatísticas de tamanho</span>
+    </div>
+    <div class="caption">
+      <button id="btn-min" aria-label="Minimizar"><svg width="10" height="10" viewBox="0 0 10 10"><path d="M0 5h10" stroke="currentColor" stroke-width="1"/></svg></button>
+      <button id="btn-max" aria-label="Maximizar"><svg width="10" height="10" viewBox="0 0 10 10"><rect x=".5" y=".5" width="9" height="9" fill="none" stroke="currentColor"/></svg></button>
+      <button id="btn-close" class="close" aria-label="Fechar"><svg width="10" height="10" viewBox="0 0 10 10"><path d="M0 0l10 10M10 0L0 10" stroke="currentColor" stroke-width="1"/></svg></button>
+    </div>
+  </div>
+
+  <div id="prog"><div id="prog-bar"></div></div>
+
+  <div id="head"></div>
+  <div id="main"></div>
+
+  <div id="status">
+    <span id="st-ready">Pronto</span>
+    <span id="st-ps"></span>
+    <span id="st-pages"></span>
+    <span class="grow"></span>
+    <span id="st-right"></span>
+  </div>
+
+  <div id="overlay" hidden>
+    <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="dlg-title">
+      <h2 id="dlg-title">Analisar base Firebird</h2>
+      <label class="fld">
+        <span>Base de dados <em>(caminho ou servidor:caminho)</em></span>
+        <div class="row">
+          <input id="f-db" type="text" spellcheck="false" placeholder="C:\dados\banco.fdb  ou  servidor:C:\dados\banco.fdb">
+          <button id="f-browse" class="btn">Procurar…</button>
+        </div>
+      </label>
+      <div class="row two">
+        <label class="fld"><span>Usuário</span><input id="f-user" type="text" value="SYSDBA" spellcheck="false"></label>
+        <label class="fld"><span>Senha</span><input id="f-pass" type="password" value="masterkey"></label>
+      </div>
+      <label class="fld">
+        <span>fbclient.dll <em>(deve ter a mesma arquitetura do programa: 64 bits)</em></span>
+        <input id="f-client" type="text" spellcheck="false" placeholder="detectar automaticamente">
+      </label>
+      <div class="checks">
+        <label><input id="f-census" type="checkbox" checked><span>Censo de páginas <em>(lê o arquivo inteiro; só funciona com a base local)</em></span></label>
+        <label><input id="f-blobs" type="checkbox" checked><span>Medir payload das colunas BLOB <em>(uma varredura por coluna)</em></span></label>
+        <label><input id="f-dup" type="checkbox"><span>Procurar duplicação entre colunas BLOB <em>(lento)</em></span></label>
+      </div>
+      <div id="dlg-error" class="error" hidden></div>
+      <div class="actions">
+        <button id="f-cancel" class="btn">Cancelar</button>
+        <button id="f-run" class="btn primary">Analisar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
