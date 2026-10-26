@@ -6,6 +6,8 @@ Firebird size statistics tool written in Delphi 7 using the [Borion framework](h
 Web interface (`web\`) and analysis: Services API (gstat), page census of the `.fdb`,
 BLOB column measurement, duplication between BLOBs and observations.
 
+<img width="800" alt="fbstats" src="https://github.com/user-attachments/assets/aaa9f601-3d37-4836-ae23-a6195513798c" />
+
 ## Building
 
     set DELPHI=C:\Program Files (x86)\Borland\Delphi7
